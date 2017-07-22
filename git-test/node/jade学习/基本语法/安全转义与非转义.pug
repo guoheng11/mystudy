@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+  body
+    h2 转义
+    -var data="text"
+    -var htmlData='<script>alert(1)</script><span>Script</span>' 
+    p #{data}
+    // 变量中含有标签输出后尖角符号被转义
+    p #{htmlData}
+     // 如果想原样输出标签的符号则用 ！{}方式输出 
+    p !{htmlData}
+    //   =变量名  输出变量名的方式与    #{}    相同
+    p=data
+    p=htmlData
+    p!=data
+    p!=htmlData
+    //如果希望输出符号   #{}；
+    p \#{data}
+    p \!{htmlData}
+    p \#{data}
+    p \!{htmlData}
+    //当给属性赋值时用 （属性名=变量名） 不能用#{}方式
+    input(value=data)

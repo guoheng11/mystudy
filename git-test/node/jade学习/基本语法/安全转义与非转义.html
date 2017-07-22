@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h2>转义</h2>
+    <p>text</p>
+    <!-- 变量中含有标签输出后尖角符号被转义-->
+    <p>&lt;script&gt;alert(1)&lt;/script&gt;&lt;span&gt;Script&lt;/span&gt;
+      <!-- 如果想原样输出标签的符号则用 ！{}方式输出 -->
+    </p>
+    <p><script>alert(1)</script><span>Script</span></p>
+    <!--   =变量名  输出变量名的方式与    #{}    相同-->
+    <p>text</p>
+    <p>&lt;script&gt;alert(1)&lt;/script&gt;&lt;span&gt;Script&lt;/span&gt;</p>
+    <p>text</p>
+    <p><script>alert(1)</script><span>Script</span></p>
+    <!--如果希望输出符号   #{}；-->
+    <p>#{data}</p>
+    <p>#{htmlData}</p>
+    <p>#{data}</p>
+    <p>#{htmlData}</p>
+    <!--当给属性赋值时用 （属性名=变量名） 不能用#{}方式-->
+    <input value="text">
+  </body>
+</html>

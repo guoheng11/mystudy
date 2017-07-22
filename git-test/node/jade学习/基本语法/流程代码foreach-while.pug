@@ -1,0 +1,106 @@
+doctype html
+html
+  head
+  body
+  // 
+   流程代码可以写在模板引擎中
+   比如if else for while
+   支持JS原生代码
+  h2 流程
+  - var imooc={"course":"jade","level": "high"}
+  - for(var k in imooc)
+    p=imooc[k]
+  //
+    在pug中 -each已经被取消，直接用  each  但是要注意缩进
+  each value,key in imooc
+    p #{key} : #{value}
+  //
+    两种遍历方式
+  - var arr=['node','jade','express']
+  each item in arr
+    p=item
+  //
+    嵌套循环遍历
+  - var sections = [{id: 1, items: ['v', 'd']}, {id: 2, items: ['ca', 'ad']}]
+  dl
+    each se in sections
+      dt=se.id
+      each item in se.items
+        dd= item
+  //
+     while循环
+  - var n=0
+  ul
+    while n < 4
+      li= n++
+  // if   else 判断
+  - var lesson=['sd','sd']
+  if lesson
+    if lesson.length >2
+      p length>2 #{lesson.join(',')}
+    else if lesson.length>1
+      p 2>=length>1 #{lesson.join(',')}
+    else
+      p no lesson
+  else 
+    p no  lesson 0
+
+    // unless  if的反义用法，条件为FALSE就运行下面的代码
+  - var isImooc=true
+  unless !isImooc
+    p #{lesson.length}
+    //  case when 类似于switch 的用法
+  - var name="jade"
+  case name
+    when 'java'
+      p java
+    when 'jade'
+      p jade
+    default 
+      p  HI #{name}
+  // mixins
+  mixin study(name,age)
+    p name=#{name},age=#{age}
+  +study("gh",12)
+  // mixin中可以嵌套mixin
+  mixin alls(student)
+    p alls-name:#{student.name}
+    +study(student.name,student.age)
+  +alls({name:'gh',age:12})
+  //方法study1
+  mixin study1(name,courses)
+    ul.courses
+      each course in courses
+        li=course
+  +study1('gh',['dfd','fg'])
+  // mixin中还可以传递代码块
+  mixin team(name)
+    h4 #{name}
+    //-下面的代码表示如果有代码块的传递则输出代码块，否则输出else
+    if block
+      block
+    else
+      p no team
+  //调用team（name）并且传递了代码块  p GOOD name
+  +team('gh')
+    p GOOD name
+  //mixin还可以传递属性  !=不是不等于的意思，而是表示非转义
+  mixin attr(name)
+    p(class!=attributes.class) #{name}
+  +attr('df')(class='magic')
+  //如果传递多个属性
+  mixin attrs(name)
+    p&attributes(attributes) #{name}
+  +attrs('attrs')(class='attrs', id='sb')
+  //
+    传递位置个数的参数,并且在PUG中，把参数传给属性直接引用变量名
+  mixin magic(name, ...items)
+    ul(class=name)
+     each item in items
+      li= item
+  +magic('magic','gh','hg')
+
+ 
+    
+
+

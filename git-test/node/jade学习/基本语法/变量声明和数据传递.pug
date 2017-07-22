@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    //
+      命令行中设置变量
+      pug 文件名.png -P -w --obj '{'name':'name'}'
+      设置之后这个页面就可以直接用这个变量
+      但是文档中声明的优先级最高
+      也可以直接访问JSON文件
+      $ pug -P -w 文件名.pug -O 文件名1.json
+
+    title #{course.toUpperCase()}
+  body

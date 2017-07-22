@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body></body>
+  <!-- 
+  流程代码可以写在模板引擎中
+  比如if else for while
+  支持JS原生代码
+  -->
+  <h2>流程</h2>
+  <p>jade</p>
+  <p>high</p>
+  <!--在pug中 -each已经被取消，直接用  each  但是要注意缩进
+  -->
+  <p>course : jade</p>
+  <p>level : high</p>
+  <!--两种遍历方式
+  -->
+  <p>node</p>
+  <p>jade</p>
+  <p>express</p>
+  <!--嵌套循环遍历
+  -->
+  <dl>
+    <dt>1</dt>
+    <dd>v</dd>
+    <dd>d</dd>
+    <dt>2</dt>
+    <dd>ca</dd>
+    <dd>ad</dd>
+  </dl>
+  <!--while循环
+  -->
+  <ul>
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <!-- if   else 判断-->
+  <p>2>=length>1 sd,sd</p>
+  <p>2</p>
+  <!--  case when 类似于switch 的用法-->
+  <p>jade</p>
+  <!-- mixins-->
+    <p>name=gh,age=12</p>
+  <!-- mixin中可以嵌套mixin-->
+    <p>alls-name:gh</p>
+      <p>name=gh,age=12</p>
+  <!--方法study1-->
+    <ul class="courses">
+      <li>dfd</li>
+      <li>fg</li>
+    </ul>
+  <!-- mixin中还可以传递代码块-->
+  <!--调用team（name）并且传递了代码块  p GOOD name-->
+    <h4>gh</h4>
+    <p>GOOD name</p>
+  <!--mixin还可以传递属性  !=不是不等于的意思，而是表示非转义-->
+    <p class="magic">df</p>
+  <!--如果传递多个属性-->
+    <p class="attrs" id="sb">attrs</p>
+  <!--传递位置个数的参数,并且在PUG中，把参数传给属性直接引用变量名
+  -->
+    <ul class="magic">
+      <li>gh</li>
+      <li>hg</li>
+    </ul>
+</html>

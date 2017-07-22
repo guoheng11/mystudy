@@ -1,0 +1,34 @@
+doctype html
+//- 兼容IE
+
+<!--[if IE 8]><html class='ie8'><! [endif]-->
+
+<!--[if IE 9]><html class='ie9'><! [endif]-->
+
+<!--[if !IE]><!--><html><!--<! [endif]-->
+  head 
+    meta(charset='utf-8')
+  
+    -var course="jffde"
+    title #{course}
+  body 
+    style.
+      body{color : red}
+    script.
+      var imooc="jade"
+    h2 注释
+    h3 单行注释
+    // h5.title.title2(id="title",class="t1") imooc
+    h3 非缓冲注释完全不会被编译到HTML代码中
+    //- h5.title.title2(id="title",class="t1") imooc
+    h3 块注释
+    //-
+      p
+      a(href="http://imooc.com",title="img") link
+        h2 文档声明和头尾标签
+    h2 标签语法
+    section
+    div#id.class1(class='class2') hah 
+    
+    h2 混排大段文本
+  </html>
