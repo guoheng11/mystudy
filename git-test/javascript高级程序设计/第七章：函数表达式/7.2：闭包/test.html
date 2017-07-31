@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		/*	function bibao(bibaoa){
+				return function(a,b){
+					var c=a[bibaoa];
+					var d=b[bibaoa];
+					console.log(c);
+					console.log(d);
+				}
+			}
+			var a=bibao(1);
+			a(['agh','ahg'],['bgh','bhg']);*/
+			function bibao(){
+				var bibaoa=0;
+				return function(a,b){
+					var c=a[bibaoa];
+					var d=b[bibaoa];
+					console.log(c);
+					console.log(d);
+					bibaoa++;
+				}
+			}
+			var a=bibao();
+			a(['agh','ahg'],['bgh','bhg']);
+			
+		a(['agh','ahg'],['bgh','bhg']); 
+		//闭包中，内部函数的作用域相关的活动对象没有被销毁。所以活动对象中的值的引用依然存在
+		</script>
+	</body>
+</html>

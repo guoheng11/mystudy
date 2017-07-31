@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+/*			function a(){
+				return function(){
+					console.log(this);
+				}
+			}
+			a()();*/
+			var name='windoe  name';
+			var obj={
+				name :"boj name",
+				getName : function(){
+					return this.name
+				}
+			}
+			console.log(obj.getName());//obj name
+			console.log((obj.getName)())//obj name
+			console.log((obj.g=obj.getName)());//window name
+		</script> 
+	</body>
+</html>

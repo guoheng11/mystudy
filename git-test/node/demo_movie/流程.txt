@@ -1,0 +1,4 @@
+1.需要引入的依赖
+  npm install express pug mongoose(我的数据库是mysql)
+  npm install bower -g  (安装bower模块用来管理静态资源，比如引入一些框架文件)
+  bower install bootstrap (通过bower指令自动下载bootstrap支援，在文件夹bower_components下)

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var color =['red','blue','green'];
+			console.log(color.toString());
+			console.log(color.valueOf());
+			console.log(color);
+			//全部输出"red,blue,green"
+			//join()方法如果没有参数，则默认数组使用逗号隔开
+		console.log(color.join('///'));//表示将数组转换成"red///blue///green"形式的字符串
+		console.log((color.valueOf()) instanceof Array);//返回的是一个数组的实例
+		console.log(typeof color.toLocaleString())//STRING
+		
+		//总结：数组转化成字符串的方法：tostring；toLocaleString；join；
+		
+		</script>
+	</body>
+</html>

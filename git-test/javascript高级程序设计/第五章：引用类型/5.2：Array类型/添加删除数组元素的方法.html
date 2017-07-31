@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=['red','blue','green'];
+			arr.push('black','white');//向数组末尾添加一个或者若干个项，并返回数组的长度
+			arr.pop()//删除数组最后一项，并返回被删除的项；
+			arr.shift()//移除数组中第一项，返回被移除的项；
+			arr.unshift("df");//向数组开头添加若干项，返回数组长度；
+			
+			//console.log(arr)
+			//总结：数组添加的方法push（添加至尾部）；unshift（头部添加）参数一个或者多个，返回数组的长度
+			//    数组删除项的方法 pop(删除最后一项)；shift(删除第一项)没有参数；返回被删除项；
+			var arrs=['red','blue','green','yellow','white'];
+			var arrs2=arrs.concat('black',['rrr','bbb']);
+			var arrs3=arrs.slice(1,4);
+			var arrs4=arrs.splice(2,2,'red4','blue4');
+			
+			
+			console.log(arrs)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+function cres(){
+	var res=[];
+		for (var i = 0; i < 5; i++) {
+		
+   res[i]=function(num){ return function(){ var btn = document.createElement('button');
+ btn.appendChild(document.createTextNode('Button ' + num));
+ btn.addEventListener('click', function(){ console.log(num); });
+ document.body.appendChild(btn);}}(i) 
+}
+		return res;
+}
+var res=cres();
+console.log(res[4]());
+		</script>
+	</body>
+</html>

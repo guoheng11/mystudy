@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fn(a) {
+  console.log(a); 
+  var a = 2;
+  function a() {}
+  console.log(a); 
+}
+
+fn(1);
+//在函数体中如果声明的变量名跟命名参数同名则形参被覆盖；
+//Ctrl+C 复制代码
+// 
+//　　输出：function  a() {} 2
+// 
+//　　我们知道var和function是会提前声明的，而且function是优先于var声明的（如果同时存在的话），所以提前声明后输出的a是个function，然后代码往下执行a进行重新赋值了，故第二次输出是2。
+
+		</script>
+	</body>
+</html>

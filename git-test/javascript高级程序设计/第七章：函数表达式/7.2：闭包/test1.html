@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+/*		var name='wind';
+			function out(){
+				(function(){
+				var a=1;
+				console.log(this);
+			})();
+			console.log(this)
+			}
+			 console.log(this.name);
+			 */
+			Myobj =function(name){
+					this.name=name;
+				}
+			Myobj.prototype.getName=function(){
+					return this.name;
+				}
+			
+				
+				
+				var obj=new Myobj('gh');
+				console.log(obj.getName());
+		</script>
+	</body>
+</html>

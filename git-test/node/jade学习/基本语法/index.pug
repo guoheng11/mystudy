@@ -168,7 +168,7 @@ block content
 
   h3 mixin 传递未知个数参数
   mixin magic(name, ...items)
-    ul(class="#{name}") 
+    ul(class="#{name}")
      each item in items
       li= item
   +magic('magic', 'node', 'jade', '..')

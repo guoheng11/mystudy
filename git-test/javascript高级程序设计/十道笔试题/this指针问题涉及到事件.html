@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function JSClass() {
+  this.m_Text = 'division element';
+  this.m_Element = document.createElement('div');
+  this.m_Element.innerHTML = this.m_Text;
+  this.m_Element.addEventListener('click', this.func);
+  // this.m_Element.onclick = this.func;
+}
+
+JSClass.prototype.Render = function() {
+  document.body.appendChild(this.m_Element);
+}
+
+JSClass.prototype.func = function() {
+  alert(this.m_Text);
+};
+
+var jc = new JSClass();
+jc.Render();  // add div
+jc.func();  // 输出 division element
+//click添加的div元素division element会输出underfined，为什么？ 
+
+
+　　//答案：division element undefined 
+ 
+　　//第一次输出很好理解，第二次的话仔细看，this其实已经指向了this.m_Element，因为是this.m_Element调用的addEventListener函数，所以内部的this全指向它了。可以试着加上一行代码this.m_Element.m_Text = 'hello world'，就会alert出hello world了。
+
+		</script>
+	</body>
+</html>
