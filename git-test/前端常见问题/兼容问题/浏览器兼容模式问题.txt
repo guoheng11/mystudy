@@ -1,0 +1,25 @@
+1.IE浏览器上需要主动切换浏览器模式兼容性视图；
+ 方法1：
+ http://www.jb51.net/css/88637.html
+  IE浏览器从IE8开始添加了兼容模式，开启后会以低版本的IE进行渲染。兼容模式有可能会导致网页显示出问题，于是我们通常在HTML中添加下列代码来使 IE 使用固定的渲染模式：
+
+  复制代码代码如下:
+
+  <metahttp-equiv="X-UA-Compatible"content="IE=8"><!--以IE8模式渲染-->
+  <metahttp-equiv="X-UA-Compatible"content="IE=7"><!--以IE7模式渲染-->
+
+  还有一种情况，在IE8下只有不使用兼容模式页面才能显示正常，但是如果设定为IE8的模式，在IE9中却会导致CSS3失效。看来，需要针对 IE8、IE9 分别 禁用兼容模式。怎么办呢？可以在后台判断浏览器版本，如果是IE8就输出content="IE=8"，如果是IE9就输出content="IE=9"。其实还可以单纯通过HTML来实现的，HTML代码如下：
+
+  复制代码代码如下:
+
+  <metahttp-equiv="X-UA-Compatible"content="IE=9; IE=8; IE=7; IE=EDGE">
+
+  经测试后完美解决了兼容模式问题，这样设置后IE中设置兼容模式的按钮也会消失，可以按F12打开“开发人员工具”来检查浏览器模式。
+
+
+  方法2：
+  https://zhidao.baidu.com/question/493473867.html
+  使用代码：
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  chrome=1，是Google Chrome Frame（谷歌内嵌浏览器框架GCF），如果有的用户电脑里面装了这个chrome的插件，就可以让电脑里面的IE不管是哪个版本的都可以使用Webkit引擎及V8引擎进行排版及运算，无比给力，不过如果用户没装这个插件，那这段代码就会让IE以最高的文档模式展现效果。
+
