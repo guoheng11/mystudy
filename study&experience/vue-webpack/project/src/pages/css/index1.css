@@ -1,0 +1,15 @@
+.export {
+    background: url("../images/icon_export_01.png");
+  }
+
+  .print {
+    background: url("../images/icon_print_01.png");
+  }
+  select{
+    border: none;
+
+  }
+  
+  .infoBOttom{
+    margin-top: 30px;
+  }

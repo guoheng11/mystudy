@@ -1,0 +1,252 @@
+
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+
+button, html input[type=button], input[type=submit] {
+    -webkit-apperance: button;
+    cursor: pointer
+}
+
+button[disabled], html input[disabled] {
+    cursor: default
+}
+
+ol, ul {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+em, i, u {
+    font-style: normal
+}
+
+html,body{
+    font-size: 12px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+
+.clear, .clr {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clearfix {
+    *zoom: 1
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+body{
+    /* background-color: #ebf2f6; */
+}
+
+
+
+body {
+    margin: 0;
+  }
+
+  #app {
+    min-width: 1200px;
+    margin: 0 auto;
+    font-family: "Helvetica Neue", "PingFang SC", Arial, sans-serif;
+  }
+
+
+  /* 头部导航 */
+
+  header {
+    z-index: 1000;
+    min-width: 1200px;
+    transition: all 0.5s ease;
+    border-top: solid 4px #3091F2;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 0 6px 0 rgba(0, 0, 0, .04);
+  }
+
+  header.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  header .el-menu-demo {
+    /* padding-left: 300px!important; */
+  }
+
+
+  /* 主内容区 */
+
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 800px;
+    background-color: #FCFCFC;
+  }
+
+  main .main-left {
+    text-align: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+  }
+
+  main .main-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #fff;
+    padding: 50px 70px;
+  }
+
+  main .el-menu {
+    background-color: transparent!important;
+  }
+
+
+  /*  */
+
+  .router-link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #475669;
+    text-decoration: none;
+  }
+
+  .is-active .router-link {
+    color: #20a0ff;
+  }
+
+
+  /* 单选框 */
+
+  .el-form-item .el-radio+.el-radio {
+    margin-left: 30px!important;
+  }
+
+
+  /* 路由切换动效 */
+
+  .fade-enter-active,
+  .fade-leave-active {
+    /* transition: all .5s; */
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+  .list-enter-active,
+  .list-leave-active {
+    /* transition: all 1s; */
+  }
+
+  .list-enter,
+  .list-leave-active {
+    opacity: 0;
+    /* transform: translateY(30px); */
+  }
+
+
+  /* 导航栏菜单选中效果 */
+
+  .isActive {
+    color: #20a0ff!important;
+  }
+
+  #app main .aside .is-active {
+    color: #475669;
+  }
+
+
+  /* 卡片 */
+
+  .el-card {
+    overflow: visible!important;
+  }
+
+  .el-pagination .btn-prev{
+          margin-left: 55px;
+  }
+  th {
+      font-weight: normal;
+  }
+
+  .el-pagination button, .el-pagination span{
+      margin-left: 10px;
+  }
+/* 下拉选择列表样式 */
+.showTable{
+    /* height: 100px;
+    overflow-y: scroll; */
+}
+ ul.compile-middle.showTable .tablehead{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.showTable .tablehead  li{
+    display: inline-block;
+}

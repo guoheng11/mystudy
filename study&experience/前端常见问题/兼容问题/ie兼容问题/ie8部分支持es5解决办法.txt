@@ -1,0 +1,2 @@
+1.ie8部分支持es5；
+需要引入引入es5-shim.min.js和es5-sham.min.js文件用来支持es5的api

@@ -1,0 +1,113 @@
+
+<el-row>
+  <el-col :span="6">
+  	  <span>姓名</span>
+  	  <input type="text" v-model="modelObj.NAME">
+  </el-col>
+  <el-col :span="6">
+  	  <span>性别</span>
+      <select class="span-select1" v-model="modelObj.SEX">
+          <option :value="item.ID" v-for="item in dropDownSexList.rows">{{item.NAME}}</option>
+      </select>
+
+  </el-col>
+  <el-col :span="6">
+  	  <span>民族</span>
+      <input type="text"v-model="modelObj.NATION_ID_NAME">
+</el-col>
+  <el-col :span="6">
+  	  <span>籍贯</span>
+  	  <input type="text" v-model="modelObj.NATIVE_PLACE">
+</el-col>
+</el-row>
+
+<el-row>
+	<el-col :span="6">
+		<span>出生日期</span>
+		<input type="text" v-model="modelObj.BIRTHDAY">
+	</el-col>
+	<el-col :span="6">
+		<span>年龄</span><input type="text" v-model="modelObj.AGE">
+		</el-col>
+	<el-col :span="6">
+		<span>政治面貌</span><input type="text" v-model="modelObj.POLITICS_STATUS_ID_NAME">
+		</el-col>
+	<el-col :span="6">
+		<span>入党时间</span>
+		<input type="text" v-model="modelObj.PARTY_DATE">
+	</el-col>
+</el-row>
+<el-row>
+	<el-col :span="6">
+		<span>身高</span><input type="text" v-model="modelObj.HEIGHT">
+	</el-col>
+	<el-col :span="6">
+		<span>体重</span><input type="text" v-model="modelObj.WEIGHT">
+		</el-col>
+	<el-col :span="6">
+		<span>视力</span><input type="text" v-model="modelObj.EYESIGHT">
+		</el-col>
+	<el-col :span="6">
+		<span>血型</span>
+		<input type="text" v-model="modelObj.BLOOD_TYPE_ID_NAME">
+	</el-col>
+</el-row>
+<el-row>
+	<el-col :span="6">
+		<span>健康状况</span><input type="text" v-model="modelObj.HEALTH_STATUS_ID_NAME">
+	</el-col>
+	<el-col :span="6">
+		<span>手机号码</span><input type="text" v-model="modelObj.CELL_PHONE_NUMBER">
+		</el-col>
+	<el-col :span="6">
+		<span>邮政编码</span><input type="text" v-model="modelObj.HOME_POST_CODE">
+		</el-col>
+	<el-col :span="6">
+		<span>住宅电话</span><input type="text" v-model="modelObj.HOME_PHONE_NUMBER">
+	</el-col>
+</el-row>
+
+<el-row>
+  <el-col :span="6">
+  	  <span>文化程度</span>
+      <input type="text"
+          v-model="modelObj.STANDARD_CULTURE_ID_NAME">
+  </el-col>
+
+  <el-col :span="12">
+  	  <span>工作地点</span>
+      <input class="placein" type="text"
+      v-model="modelObj.WORKPLACE">
+</el-col>
+  <el-col :span="6">
+  	  <span>办公号码</span>
+      <input type="text"
+      v-model="modelObj.WORK_PHONE_NUMBER">
+</el-col>
+</el-row>
+
+<el-row>
+  <el-col :span="9">
+  	  <span>身份证号</span>
+      <input type="text"
+      v-model="modelObj.ID_NUMBER">
+  </el-col>
+
+  <el-col :span="9">
+  	  <span>电子邮件</span>
+      <input type="text"
+      v-model="modelObj.EMAIL">
+</el-col>
+  <el-col :span="6">
+  	  <span>港澳台侨胞</span>
+      <input class="lastinput" type="text"
+       v-model="modelObj.DIST_TYPE_ID_NAME">
+</el-col>
+</el-row>
+<el-row>
+  <el-col :span="24">
+  	  <span>户口所在地</span>
+      <input type="text"
+      v-model="modelObj.ID_NUMBER">
+  </el-col>
+</el-row>

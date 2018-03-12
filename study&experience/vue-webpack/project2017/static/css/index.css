@@ -1,0 +1,251 @@
+
+.infoPlace {
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #9b9b9b;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #ebf2f6;
+    padding: 0 30px 0 20px;
+}
+
+.infoPlace span {
+    color: #626262;
+
+}
+
+.infoTitle {
+    font-family: PingFangSC-Regular;
+    height: 70px;
+    padding: 0 30px 0 20px;
+    line-height: 70px;
+}
+
+.roster {
+    font-size: 16px;
+    color: #626262;
+    text-align: left;
+}
+
+.infoTitle span {
+    color: #5d89b3;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.infoTitle li a {
+    display: block;
+    background: #fff;
+    border-radius: 100px;
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #5d89b3;
+    text-align: center;
+    margin-left: 20px;
+    position: relative;
+    border: 1px solid #5d89b3;
+    margin-top: 20px;
+}
+
+.export {
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 13px;
+
+    top: 9px;
+    left: 20px;
+}
+
+.inquire  {
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 9px;
+    left: 20px;
+}
+
+.print {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 13px;
+    top: 9px;
+    left: 23px;
+}
+
+.roster-message {
+    font-size: 12px;
+    width: 100%;
+    padding: 0 30px 0px 20px;
+}
+
+.roster-table {
+    width: 100%;
+    min-width: 1320px;
+}
+
+tr {
+    opacity: 0.49;
+    background: #f8f8f8;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    width: 1061px;
+    /*height: 48px;*/
+    font-size: 12px;
+}
+
+.r-t-head {
+    background: #f5f8fa;
+    border: 1px solid #5d89b3;
+    border-radius: 3px;
+    width: 1261px;
+    height: 48px;
+    color: #5d89b3;
+    opacity: 1;
+
+}
+
+.roster-msg {
+    width: 100%;
+    min-width: 1320px;
+    opacity: 0.49;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    width: 1161px;
+    height: 48px;
+}
+
+.info {
+    background-color: #fff;
+    margin: 0 40px 0 30px;
+}
+
+.infoBOttom {
+    padding: 0 30px 0 20px;
+    letter-spacing: .3em;
+    height: 80px;
+    line-height: 60px;
+}
+
+.infoBOttom-left {
+    margin-left: 28px;
+}
+
+.infoBOttom-right {
+    margin-right: 100px;
+}
+
+.infoBOttom-right a {
+    color: #626262;
+    text-decoration: none;
+}
+
+.infoBOttom-right a:hover, .infoBOttom-right a:link, .infoBOttom-right a:active, .infoBOttom-right a:visited {
+    color: #626262;
+    text-decoration: none;
+}
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: none;
+
+}
+
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 33px;
+    vertical-align: top;
+    border-top: none;
+    display: table-cell;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th {
+    padding: 8px;
+    line-height: 33px;
+    vertical-align: top;
+    border-top: none;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    paddingding: 8px;
+    text-align: center;
+}
+
+.uncommitted {
+    color: #f797a3;
+}
+
+#ul li {
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    list-style: none;
+    float: left;
+    padding: 6px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    margin: 2px;
+    cursor: pointer;
+    color: #585858;
+}
+
+#div {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+#ul .background {
+    background: #39C6F4;
+    color: white;
+    border: 1px solid #39C6F4;
+}
+
+.pagination > li > a, .pagination > li > span {
+    color: #777;
+    border: none;
+}
+
+.condition {
+    width: 269px;
+    height: 28px;
+    border: 1px solid #5d89b3;
+    border-radius: 15px;
+    outline-style: none;
+    padding-left: 150px;
+}
+.roster-message,main .main-right,.infoTitle ,.infoPlace{
+  padding: 0;
+  margin: 0;
+}
+table{
+  width: 100%;
+}
+.line {
+  height: 1px;
+  width: 9px;
+  background-color: #5d89b3;
+  position: absolute;
+  top: 13px;
+  left: 83px;
+}
+

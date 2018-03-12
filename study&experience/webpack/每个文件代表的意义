@@ -1,0 +1,10 @@
+1。目录结构
+webpack-demo
+|- package.json  （npm init 生成  的项目以及相关信息 此文件中可以设置快捷键用来启动打包工具）
+|- webpack.config.js  （webpack配置文件，避免繁杂的命令，通过配置文件解决）
+|- /dist
+  |- bundle.js      （一般输出的目录可以通过配置文件配置，一般使用这个默认的）
+  |- index.html      （发布的项目文件的入口）
+|- /src               （源代码的目录。会被webpack打包成为bundle.js的一部分）
+  |- index.js          （源代码入口）
+|- /node_modules        （所需要的依赖包）

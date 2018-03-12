@@ -1,0 +1,21 @@
+在当前目录下创建文件夹  &&表示前一个指令执行之后再执行下一个指令
+mkdir webpack-demo && cd webpack-demo
+初始化 npm
+npm init -y
+以及在本地安装 webpack：
+npm install --save-dev webpack
+要在 index.js 中打包 lodash 依赖，我们需要在本地安装 library。
+npm install --save lodash
+
+可以这样说，执行 npx webpack，会将我们的脚本作为入口起点（index.js ），然后输出为 bundle.js
+npx webpack src/index.js --output dist/bundle.js
+
+现在，让我们通过新配置再次执行构建（通过配置文件简化了构建的过程）
+npx webpack --config webpack.config.js
+
+通过npm快速启动项目---》会先执行package.json配置文件然后调用打包工具打包生成可运行的程序
+npm run build
+通过向 npm run build 命令和你的参数之间添加两个中横线，可以将自定义参数传递给 webpack，例如：npm run build -- --colors。
+
+
+

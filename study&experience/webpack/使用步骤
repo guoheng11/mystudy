@@ -1,0 +1,85 @@
+1.基本安装
+  首先我们创建一个目录，初始化 npm，以及在本地安装 webpack：
+
+  mkdir webpack-demo && cd webpack-demo
+  npm init -y
+  npm install --save-dev webpack
+2.创建目录结构以及基本文件
+    webpack-demo
+    |- package.json
+  + |- index.html
+  + |- /src
+  +   |- index.js
+
+
+  src/index.js
+
+  function component() {
+    var element = document.createElement('div');
+
+    // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+    return element;
+  }
+      document.body.appendChild(component());
+
+
+  index.html
+
+  <!doctype html>
+  <html>
+    <head>
+      <title>Getting Started</title>
+      <script src="https://unpkg.com/lodash@4.16.6"></script>
+    </head>
+    <body>
+      <script src="./src/index.js"></script>
+    </body>
+  </html>
+
+3.创建一个bundle文件
+project
+
+  webpack-demo
+  |- package.json
++ |- /dist
++   |- index.html
+- |- index.html
+  |- /src
+    |- index.js
+要在 index.js 中打包 lodash 依赖，我们需要在本地安装 library。
+
+npm install --save lodash
+然后在我们的脚本中 import。
+
+src/index.js
+
++ import _ from 'lodash';
++
+  function component() {
+    var element = document.createElement('div');
+
+-   // Lodash, currently included via a script, is required for this line to work
++   // Lodash, now imported by this script
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+
+    return element;
+  }
+
+  document.body.appendChild(component());
+现在，由于通过打包来合成脚本，我们必须更新 index.html 文件。因为现在是通过 import 引入 lodash，所以将 lodash <script> 删除，然后修改另一个 <script> 标签来加载 bundle，而不是原始的 /src 文件：
+
+dist/index.html
+
+  <!doctype html>
+  <html>
+   <head>
+     <title>Getting Started</title>
+-    <script src="https://unpkg.com/lodash@4.16.6"></script>
+   </head>
+   <body>
+-    <script src="./src/index.js"></script>
++    <script src="bundle.js"></script>
+   </body>
+  </html>
