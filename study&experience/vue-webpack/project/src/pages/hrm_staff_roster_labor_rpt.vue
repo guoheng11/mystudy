@@ -1,4 +1,4 @@
-$<template>
+<template>
   <div class="info">
     <div class="infoPlace ">
       您所在的位置是：
@@ -39,7 +39,7 @@ $<template>
 
         <tbody id="tbody">
           <tr v-for="(item,index) in tableResultList.rows">
-            <td>{{index=+1}</td>
+            <td>{{index=+1}}</td>
             <td>{{item.CODE}}</td>
             <td>{{item.NAME}}</td>
             <td>{{item.ID_NUMBER}}</td>
@@ -63,8 +63,8 @@ $<template>
                 layout="total, sizes, prev, pager, next, jumper"
                 :total="tableResultList.total">
               </el-pagination>
-              
-        </div>    
+
+        </div>
         <div class="showtotal" @click="cmdShowTotal">显示全部
         </div>
     </div>
@@ -75,91 +75,89 @@ $<template>
 export default {
   data() {
     return {
-      pageSize:10,
-      currentPage:1,
+      pageSize: 10,
+      currentPage: 1,
       tableResultList: [, ],
-      condition:""
+      condition: ""
     }
   },
   methods: {
-   comGetDatas() {
-      var param = this.common.orderOftenPagingParam(this.currentPage,this.pageSize,"","","")
-      var url = this.common.baseNodeUrl+"hrm/rpt/Srv_HRM_StaffRosterRpt.ashx" + param  
-         this.$http.get(url)             
-					.then(function(res) {
-						var dataJson = res.body;
-						console.log(dataJson)
-						if(dataJson.Succeed != 1) {
-							if(dataJson.Message!=null)
-							{
-								alert(dataJson.Message);
-							}
-							console.log("合同制工花名册数据失败");
-							return false;
-						}
-						this.tableResultList = dataJson.Message;
-					}).catch(function (res) {
-	        			  console.log(res+"合同制工花名册数据异常")
-					});		
+    comGetDatas() {
+      var param = this.common.orderOftenPagingParam(this.currentPage, this.pageSize, "", "", "")
+      var url = this.common.baseNodeUrl + "hrm/rpt/Srv_HRM_StaffRosterRpt.ashx" + param
+      this.$http.get(url)
+        .then(function(res) {
+          var dataJson = res.body;
+          console.log(dataJson)
+          if (dataJson.Succeed != 1) {
+            if (dataJson.Message != null) {
+              alert(dataJson.Message);
+            }
+            console.log("合同制工花名册数据失败");
+            return false;
+          }
+          this.tableResultList = dataJson.Message;
+        }).catch(function(res) {
+          console.log(res + "合同制工花名册数据异常")
+        });
     },
     // 导出
-    cmdDetailExpExcel(){
-        var url = this.common.baseNodeUrl+"hrm/rpt/Srv_HRM_StaffRosterContractRptExcel.ashx";
-         this.$http.get(url)             
-					.then(function(res) {
-						var dataJson = res.body;
-						if(dataJson.Succeed != 1) {
-							if(dataJson.Message!=null)
-							{
-								alert(dataJson.Message);
-							}
-							console.log("合同制工花名册导出数据失败");
-							return false;
-						}
-						window.location.href = dataJson.Message;
-					}).catch(function (res) {
-	        			  console.log(res+"合同制工花名册导出数据异常")
-					});		
+    cmdDetailExpExcel() {
+      var url = this.common.baseNodeUrl + "hrm/rpt/Srv_HRM_StaffRosterContractRptExcel.ashx";
+      this.$http.get(url)
+        .then(function(res) {
+          var dataJson = res.body;
+          if (dataJson.Succeed != 1) {
+            if (dataJson.Message != null) {
+              alert(dataJson.Message);
+            }
+            console.log("合同制工花名册导出数据失败");
+            return false;
+          }
+          window.location.href = dataJson.Message;
+        }).catch(function(res) {
+          console.log(res + "合同制工花名册导出数据异常")
+        });
     },
     //打印
-    cmdPrint(){
-    	this.$confirm('您确定要打印', '是否继续?', '提示', {
-					confirmButtonText: '确定',
-					cancelButtonText: '取消',
-					type: 'warning'
-				}).then(() => {
-//					this.isActiveAdd = false;
-//					function print(printpage) {						
-//						var bt = document.getElementById("commandPrint");
-//						var div_print = document.getElementById("dataGridTableJson");
-//						bt.onclick = function() {
-//							printdiv(div_print);
-//							console.log(bt)
-//						}
-//					}
-				}).catch(function (response) {
-        			console.log(response)
-   				});
+    cmdPrint() {
+      this.$confirm('您确定要打印', '是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        //					this.isActiveAdd = false;
+        //					function print(printpage) {
+        //						var bt = document.getElementById("commandPrint");
+        //						var div_print = document.getElementById("dataGridTableJson");
+        //						bt.onclick = function() {
+        //							printdiv(div_print);
+        //							console.log(bt)
+        //						}
+        //					}
+      }).catch(function(response) {
+        console.log(response)
+      });
     },
     handleSizeChange(val) {
       this.pageSize = val;
       this.currentPage = 0;
     },
     handleCurrentChange(val) {
-      this.currentPage=val=0?1:val;
+      this.currentPage = val = 0 ? 1 : val;
       this.comGetDatas();
     },
-    cmdShowTotal(){
+    cmdShowTotal() {
       this.currentPage = 1;
-      this.pageSize= -1;
+      this.pageSize = -1;
       this.comGetDatas();
     },
   },
   created() {
-     this.comGetDatas();
+    this.comGetDatas();
   },
-  mounted(){
-  	
+  mounted() {
+
   }
 }
 </script>
@@ -175,13 +173,9 @@ export default {
   left: 250px;
 }
 
-.tablelist{
-	border-collapse:separate;
-	border-spacing: 0px 10px;
-  margin-right:30px;
+.tablelist {
+  border-collapse: separate;
+  border-spacing: 0px 10px;
+  margin-right: 30px;
 }
-
-
-
-
 </style>

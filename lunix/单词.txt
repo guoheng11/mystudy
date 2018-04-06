@@ -1,0 +1,35 @@
+terminal   终端
+popup      弹出
+Command    命令
+current    当前
+format     格式
+entries    项
+themselves 他们自己
+subdirectories 子目录
+recursively 递归
+Environment 环境
+reference   参考
+manuals     手册
+Browse      浏览
+Page Up     上一页（向上一页翻页）
+Page Down   下一页（向下一页翻页）
+screenful   满屏
+features    特征
+entire      整个
+start up    启动
+Pipe        管（管子; 烟斗）
+represented 代表
+vertical    垂直
+bar         条，棒，酒吧
+feed        喂注入，进入;养；供…作食物
+program     程序
+grep       检索目标行命令
+Regular    定期
+Expressions  表达，表述
+frequently   频繁的，经常的
+option       选项
+case         案件，外壳，例子
+insensitive  不敏感
+case-insensitive   不区分大小写
+Simply      简单地,仅仅
+Permission denied  权限不够

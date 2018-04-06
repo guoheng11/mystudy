@@ -1,0 +1,2 @@
+   1. 请在ES5下实现一个继承，Child继承Parent。要求：Child要继承Parent的所有方法和属性
+   

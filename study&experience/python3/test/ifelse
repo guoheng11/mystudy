@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+
+height = 1.75
+weight = 80.5
+bmi = 20
+if bmi>19:
+    print('aaa')
